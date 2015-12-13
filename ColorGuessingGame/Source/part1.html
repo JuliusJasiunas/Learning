@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Color Guessing Game</title>
+<script type="text/javascript">
+	var colors = [ "aqua", "black", "cyan", "fuchsia", "gold", "indigo",
+			"lavender", "magenta", "navy", "olive", "peru", "red", "silver",
+			"tomato", "wheat" ];
+	var targetColorName;
+	var finished = false;
+	var guessCount = 0;
+	var userInput;
+
+	function do_game() {
+		var randomColorIndex = Math.floor(Math.random() * 15);
+		targetColorName = colors[randomColorIndex];
+
+		alert(targetColorName); // for debugging
+
+		while (!finished) {
+			userInput = prompt("I am thinking of one of these colors:\n\n"
+					+ colors.join(", ") + "\n\nWhat color am I thinking of?");
+			guessCount++;
+			if (check_guess()) {
+				finished = true;
+
+				var myBody = document.getElementsByTagName("body")[0];
+				myBody.style.background = targetColorName;
+
+				alert("Congratulations! You have guessed the color!\n\nIt took you "
+						+ guessCount
+						+ " guess(-es) to finish the game!\n\nYou can see the colour in the background.")
+			}
+		}
+	}
+
+	function check_guess() {
+		if (userInput != targetColorName) {
+			return false;
+		}
+
+		return true;
+	}
+</script>
+</head>
+<body onload="do_game()">
+</body>
+</html>
