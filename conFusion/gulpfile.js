@@ -32,11 +32,11 @@ gulp.task('default', ['clean'], function () {
     gulp.start('usemin', 'imagemin', 'copyfonts');
 });
 
-gulp.task('usemin', ['jshint'], function () {
+gulp.task('usemin',['jshint'], function () {
     return gulp.src('./app/**/*.html')
         .pipe(usemin({
-            css: [minifycss(), rev()],
-            js: [ngannotate(), uglify(), rev()]
+            css:[minifycss(),rev()],
+            js: [ngannotate(),uglify(),rev()]
         }))
         .pipe(gulp.dest('dist/'));
 });
