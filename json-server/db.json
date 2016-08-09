@@ -6,7 +6,7 @@
       "image": "images/uthapizza.png",
       "category": "mains",
       "label": "Hot",
-      "price": "4.99",
+      "price": 4.99,
       "description": "A unique combination of Indian Uthappam (pancake) and Italian pizza, topped with Cerignola olives, ripe vine cherry tomatoes, Vidalia onion, Guntur chillies and Buffalo Paneer.",
       "comments": [
         {
@@ -38,6 +38,12 @@
           "comment": "It's your birthday, we're gonna party!",
           "author": "25 Cent",
           "date": "2011-12-02T17:57:28.556094Z"
+        },
+        {
+          "rating": 2,
+          "comment": "Nekažką...",
+          "author": "Julius",
+          "date": "2016-08-03T21:56:10.849Z"
         }
       ]
     },
@@ -210,6 +216,31 @@
     }
   ],
   "feedback": [
-
+    {
+      "mychannel": "Email",
+      "firstName": "asdasd",
+      "lastName": "asdasd",
+      "agree": true,
+      "email": "asd@sd.lt",
+      "tel": {
+        "areaCode": "asd",
+        "number": "asd"
+      },
+      "comments": "adasdasd",
+      "id": 1
+    },
+    {
+      "mychannel": "Email",
+      "firstName": "sadasd",
+      "lastName": "sadsadsadasd",
+      "agree": true,
+      "email": "asdasdasd@asdasd5454.lt",
+      "tel": {
+        "areaCode": "asdasd",
+        "number": "122121"
+      },
+      "comments": "adsadasdasd",
+      "id": 2
+    }
   ]
 }
